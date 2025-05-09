@@ -29,7 +29,7 @@ sudo -u postgres psql
 Within the shell, enter the following commands to create the database and user (role), substituting your own value for the password:
 
 ```postgresql
-CREATE DATABASE netbox;
+CREATE DATABASE netbox WITH TEMPLATE = template0 ENCODING = 'UTF8';
 CREATE USER netbox WITH PASSWORD 'J5brHrAXFLQSif0K';
 ALTER DATABASE netbox OWNER TO netbox;
 -- the next two commands are needed on PostgreSQL 15 and later
